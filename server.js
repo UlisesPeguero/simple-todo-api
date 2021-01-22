@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 // routers
-const todosRouter = require('./routes/todos');
+//const todosRouter = require('./routes/todos');
 const listsRouter = require('./routes/lists');
 //
 const mongoose = require('mongoose');
@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // routers
-// app.use('/api', routerApi);
+app.use('/lists', listsRouter);
 
 app.listen(PORT, () => {
     console.log(`Server is listening on ${PORT}`);
